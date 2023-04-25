@@ -1,1 +1,32 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, aisle INTEGER);
+
+INSERT INTO store VALUES (1, "business clothes", 35.00, 4);
+INSERT INTO store VALUES (2, "casual clothes", 25.00, 4);
+INSERT INTO store VALUES (3, "running clothes", 15.00, 4);
+INSERT INTO store VALUES (4, "pajamas", 12.99, 5);
+INSERT INTO store VALUES (5, "undergarments",10.99, 5);
+INSERT INTO store VALUES (6, "socks", 5.99, 5);
+INSERT INTO store VALUES (7, "business shoes", 45.00, 6);
+INSERT INTO store VALUES (8, "shoes", 37.99, 6);
+INSERT INTO store VALUES (9, "running shoes", 47.99, 6);
+INSERT INTO store VALUES (10, "jewerly", 19.99, 1);
+INSERT INTO store VALUES (11, " accessories", 15.75, 1);
+INSERT INTO store VALUES (12, "handbags", 17.50, 2);
+INSERT INTO store VALUES (13, "belts", 12.99, 2);
+INSERT INTO store VALUES (14, "face makeup", 15.00, 3);
+INSERT INTO store VALUES (15, "eye makeup", 13.00, 3);
+
+---display the database by price
+SELECT * FROM store
+ORDER BY price;
+
+---display the avg price 
+SELECT AVG(price) "avg price" 
+FROM store;
+
+SELECT * FROM store
+WHERE price>=35;
+
+---display all aisles before the 5th aisle
+SELECT * FROM store WHERE aisle < 5 ORDER BY aisle;
 
